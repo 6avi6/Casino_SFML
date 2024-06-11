@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="VirtuallClasses">
+      <UniqueIdentifier>{526cf43a-7a65-481e-8340-e66fb71ac15e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VirtuallClasses\MoveableGraphicalObject">
+      <UniqueIdentifier>{96560c21-369e-402e-a5e4-a7c973106d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VirtuallClasses\GraphicalObject">
+      <UniqueIdentifier>{f6dfe2b3-5da3-4e75-9ef7-8576e9e5267c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VirtuallClasses\Window">
+      <UniqueIdentifier>{8d9f5710-e1ac-494b-a470-398a993b12ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects">
+      <UniqueIdentifier>{e2c5b593-90b4-466e-85d2-f19b223ad9c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Button">
+      <UniqueIdentifier>{8b2a61c8-0a8e-49e8-b88f-9dc2d9d07375}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Casino_SFML.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Objects\Button</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GraphicalObject.h">
+      <Filter>VirtuallClasses\GraphicalObject</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveableGrapphicalObject.h">
+      <Filter>VirtuallClasses\MoveableGraphicalObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>VirtuallClasses\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Objects\Button</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\ClassDiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:ClassDiagram.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Casino_SFML.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:Casino_SFML.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\GraphicalObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:GraphicalObject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Button.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:Button.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:Button.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{de1fc918-f32e-4dd7-a915-1792a051f26b}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Button.cpp",
+              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Button.cpp",
+              "RelativeDocumentMoniker": "Button.cpp",
+              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Button.cpp",
+              "RelativeToolTip": "Button.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-11T18:15:18.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Button.h",
+              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Button.h",
+              "RelativeDocumentMoniker": "Button.h",
+              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Button.h",
+              "RelativeToolTip": "Button.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-11T18:15:04.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GraphicalObject.h",
+              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\GraphicalObject.h",
+              "RelativeDocumentMoniker": "GraphicalObject.h",
+              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\GraphicalObject.h",
+              "RelativeToolTip": "GraphicalObject.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-11T18:08:36.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Window.h",
+              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Window.h",
+              "RelativeDocumentMoniker": "Window.h",
+              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Window.h",
+              "RelativeToolTip": "Window.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-06-11T17:56:36.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClassDiagram.cd",
+              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\ClassDiagram.cd",
+              "RelativeDocumentMoniker": "ClassDiagram.cd",
+              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\ClassDiagram.cd",
+              "RelativeToolTip": "ClassDiagram.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2024-06-11T17:55:10.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Casino_SFML.cpp",
+              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Casino_SFML.cpp",
+              "RelativeDocumentMoniker": "Casino_SFML.cpp",
+              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\Casino_SFML.cpp",
+              "RelativeToolTip": "Casino_SFML.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-11T17:10:21.731Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
