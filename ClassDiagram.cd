@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
   <Class Name="Window" Collapsed="true">
-    <Position X="6.75" Y="2.25" Width="1.5" />
+    <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAEAQAAIEIAAAAAAAAA=</HashCode>
+      <HashCode>AEAAAABAAAAAAAAAAAAAAAAAAAEAQAAIEIAAAAACAAA=</HashCode>
       <FileName>Window.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -26,6 +26,13 @@
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAgAAAIAAAAAAAAAAAAAAAAgAAAABAA=</HashCode>
       <FileName>Button.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TitleWindow" Collapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAAAAIAAAAAgAoAAAAAAAAAkAQBAAEIAAAAAAIAA=</HashCode>
+      <FileName>TitleWindow.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

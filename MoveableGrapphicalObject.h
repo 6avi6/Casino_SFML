@@ -1,10 +1,13 @@
 #ifndef MOVEABLEGRAPHICALOBJECT_H
 #define MOVEABLEGRAPHICALOBJECT_H
+
 #include "GraphicalObject.h"
 
-class MoveableGrapphicalObject :public GraphicalObject {
+// Abstract base class representing a movable graphical object
+class MoveableGrapphicalObject : public GraphicalObject {
 public:
-	virtual void move() = 0;
+    // Pure virtual function to move the object
+    virtual void move() = 0;
 };
 
 #endif // !MOVEABLEGRAPHICALOBJECT_H

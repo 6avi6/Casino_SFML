@@ -23,6 +23,12 @@
     <Filter Include="Objects\Button">
       <UniqueIdentifier>{8b2a61c8-0a8e-49e8-b88f-9dc2d9d07375}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{b593a2e5-213b-494c-ab5c-6406cdc88dd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows\TitleWindow">
+      <UniqueIdentifier>{f5b43024-124a-4889-bd7d-ac45626e8505}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Casino_SFML.cpp">
@@ -30,6 +36,9 @@
     </ClCompile>
     <ClCompile Include="Button.cpp">
       <Filter>Objects\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleWindow.cpp">
+      <Filter>Windows\TitleWindow</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -44,6 +53,9 @@
     </ClInclude>
     <ClInclude Include="Button.h">
       <Filter>Objects\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleWindow.h">
+      <Filter>Windows\TitleWindow</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
