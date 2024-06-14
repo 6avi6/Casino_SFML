@@ -29,6 +29,9 @@
     <Filter Include="Windows\TitleWindow">
       <UniqueIdentifier>{f5b43024-124a-4889-bd7d-ac45626e8505}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Windows\CoinflipGame">
+      <UniqueIdentifier>{86ad236e-3680-463a-9038-22f9a4da83ed}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Casino_SFML.cpp">
@@ -39,6 +42,9 @@
     </ClCompile>
     <ClCompile Include="TitleWindow.cpp">
       <Filter>Windows\TitleWindow</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinflipGame.cpp">
+      <Filter>Windows\CoinflipGame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +62,9 @@
     </ClInclude>
     <ClInclude Include="TitleWindow.h">
       <Filter>Windows\TitleWindow</Filter>
+    </ClInclude>
+    <ClInclude Include="CoinflipGame.h">
+      <Filter>Windows\CoinflipGame</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

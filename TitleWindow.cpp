@@ -67,6 +67,8 @@ void TitleWindow::runWindow() {
                     // Check if coinflipButton is clicked
                     if (coinflipButton->isClicked(mousePos)) {
                         // Handle button click for coinflip
+                        CoinflipGame coinflipGame(this->window);
+                        coinflipGame.runWindow();
                     }
                 }
             }

@@ -139,10 +139,12 @@
   <ItemGroup>
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Casino_SFML.cpp" />
+    <ClCompile Include="CoinflipGame.cpp" />
     <ClCompile Include="TitleWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h" />
+    <ClInclude Include="CoinflipGame.h" />
     <ClInclude Include="GraphicalObject.h" />
     <ClInclude Include="MoveableGrapphicalObject.h" />
     <ClInclude Include="TitleWindow.h" />

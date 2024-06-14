@@ -19,7 +19,7 @@ public:
     virtual void clear() = 0;
     virtual void close() = 0;
     virtual void display() = 0;
-
+    bool isOpen;
     // Method to read and load a font from a file
     sf::Font readFont(const std::string& fontPath) {
         // Check if the file exists
