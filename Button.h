@@ -8,14 +8,14 @@ class Button : public GraphicalObject {
 public:
     // Constructor
     Button(const sf::Vector2f& position, const sf::Vector2f& size, const sf::Color& color, const std::string& text, sf::Font& font);
-
+    Button();
     // Draw the button on the window
     void draw(std::shared_ptr<sf::RenderWindow> window) override;
 
     // Check if the button is clicked
     bool isClicked(const sf::Vector2f& mousePosition) const;
 
-private:
+protected:
     sf::RectangleShape shape;  // Shape of the button
     sf::Text buttonText;       // Text on the button
 };

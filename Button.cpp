@@ -31,6 +31,10 @@ Button::Button(const sf::Vector2f& position, const sf::Vector2f& size, const sf:
     buttonText.setPosition(position);
 }
 
+Button::Button()
+{
+}
+
 void Button::draw(std::shared_ptr<sf::RenderWindow> window) {
     // Draw the button shape
     window->draw(shape);

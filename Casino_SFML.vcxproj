@@ -140,6 +140,9 @@
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Casino_SFML.cpp" />
     <ClCompile Include="CoinflipGame.cpp" />
+    <ClCompile Include="RouletteGame.cpp" />
+    <ClCompile Include="SelectedButton.cpp" />
+    <ClCompile Include="Text.cpp" />
     <ClCompile Include="TitleWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +150,9 @@
     <ClInclude Include="CoinflipGame.h" />
     <ClInclude Include="GraphicalObject.h" />
     <ClInclude Include="MoveableGrapphicalObject.h" />
+    <ClInclude Include="RouletteGame.h" />
+    <ClInclude Include="SelectedButton.h" />
+    <ClInclude Include="Text.h" />
     <ClInclude Include="TitleWindow.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>

@@ -32,6 +32,15 @@
     <Filter Include="Windows\CoinflipGame">
       <UniqueIdentifier>{86ad236e-3680-463a-9038-22f9a4da83ed}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Windows\RouletteGame">
+      <UniqueIdentifier>{036839f8-ae38-4461-935e-f87d7be64118}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\SelectedButton">
+      <UniqueIdentifier>{8af02917-d373-4670-939a-7d763225ed09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Objects\Text">
+      <UniqueIdentifier>{1f73cb85-f561-4ef0-99ae-68bf085b3283}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Casino_SFML.cpp">
@@ -45,6 +54,15 @@
     </ClCompile>
     <ClCompile Include="CoinflipGame.cpp">
       <Filter>Windows\CoinflipGame</Filter>
+    </ClCompile>
+    <ClCompile Include="RouletteGame.cpp">
+      <Filter>Windows\RouletteGame</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectedButton.cpp">
+      <Filter>Objects\SelectedButton</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Objects\Text</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -65,6 +83,15 @@
     </ClInclude>
     <ClInclude Include="CoinflipGame.h">
       <Filter>Windows\CoinflipGame</Filter>
+    </ClInclude>
+    <ClInclude Include="RouletteGame.h">
+      <Filter>Windows\RouletteGame</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectedButton.h">
+      <Filter>Objects\SelectedButton</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Objects\Text</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

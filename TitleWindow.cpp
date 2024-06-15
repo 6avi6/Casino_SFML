@@ -62,6 +62,8 @@ void TitleWindow::runWindow() {
                     // Check if rouletteButton is clicked
                     if (rouletteButton->isClicked(mousePos)) {
                         // Handle button click for roulette
+                        RouletteGame rouletteGame(this->window);
+                        rouletteGame.runWindow();
                     }
 
                     // Check if coinflipButton is clicked

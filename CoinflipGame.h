@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "Window.h"
-#include "Button.h"
+#include "SelectedButton.h"
 #include <memory>
 
 
@@ -31,6 +31,8 @@ private:
     sf::Font font;
     std::shared_ptr<Button> flipButton;
     std::shared_ptr<Button> exitButton;
+    std::shared_ptr<SelectedButton> headsButton;
+    std::shared_ptr<SelectedButton> tailsButton;
 
     // Game state
     std::string result;

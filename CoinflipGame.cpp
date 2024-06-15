@@ -15,10 +15,18 @@ CoinflipGame::CoinflipGame(std::shared_ptr<sf::RenderWindow> window) {
     // Create the exit button in the top right corner
     exitButton = std::make_shared<Button>(sf::Vector2f(this->window->getSize().x -100/2,  50/2), sf::Vector2f(100, 50), sf::Color::Red, "Exit", font);
 
+    // U¿ycie std::make_shared z odpowiednimi parametrami
+    int initialValue = 0; // Domyœlna wartoœæ dla headsButton
+    headsButton = std::make_shared<SelectedButton>(sf::Vector2f((this->window->getSize().x - 100) * 0.7f, this->window->getSize().y * 0.8), sf::Vector2f(100, 50), sf::Color::Yellow, "Heads", font, initialValue);
+
+    int anotherValue = 1; // Inna wartoœæ dla tailsButton
+    tailsButton = std::make_shared<SelectedButton>(sf::Vector2f((this->window->getSize().x - 100) * 0.4f, this->window->getSize().y * 0.8), sf::Vector2f(100, 50), sf::Color::Magenta, "Tails", font, anotherValue);
+
     // Initialize game state
     result = "Click the button to flip the coin!";
     this->initCoinEntity();
     this->clear();
+    
 }
 
 void CoinflipGame::runWindow() {
@@ -60,12 +68,23 @@ void CoinflipGame::handleEvents() {
                 // Close the window if the exit button is clicked
                 this->isOpen = false;
             }
+            else if (headsButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
+                headsButton->setSelected(!headsButton->getSelected());
+                if (tailsButton->getSelected())
+                    tailsButton->setSelected(false);
+            }
+            else if (tailsButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
+                tailsButton->setSelected(!tailsButton->getSelected());
+                if (headsButton->getSelected())
+                    headsButton->setSelected(false);
+            }
+
         }
     }
 }
 
 void CoinflipGame::update() {
-    // Any game state updates can go here
+    
 }
 
 void CoinflipGame::render() {
@@ -89,7 +108,8 @@ void CoinflipGame::render() {
     else
         window->draw(this->coinEntity[1]);
 
-
+    headsButton->draw(window);
+    tailsButton->draw(window);
     
     this->tossCoin();
     display();

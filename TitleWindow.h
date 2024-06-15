@@ -7,6 +7,7 @@
 #include "Button.h"
 
 #include "CoinflipGame.h"
+#include "RouletteGame.h"
 
 // TitleWindow class inheriting privately from the Window class
 class TitleWindow : private Window {
