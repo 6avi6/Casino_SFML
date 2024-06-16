@@ -149,7 +149,6 @@
     <ClInclude Include="Button.h" />
     <ClInclude Include="CoinflipGame.h" />
     <ClInclude Include="GraphicalObject.h" />
-    <ClInclude Include="MoveableGrapphicalObject.h" />
     <ClInclude Include="RouletteGame.h" />
     <ClInclude Include="SelectedButton.h" />
     <ClInclude Include="Text.h" />

@@ -17,16 +17,16 @@ CoinflipGame::CoinflipGame(std::shared_ptr<sf::RenderWindow> window) {
 
     // U¿ycie std::make_shared z odpowiednimi parametrami
     int initialValue = 0; // Domyœlna wartoœæ dla headsButton
-    headsButton = std::make_shared<SelectedButton>(sf::Vector2f((this->window->getSize().x - 100) * 0.7f, this->window->getSize().y * 0.8), sf::Vector2f(100, 50), sf::Color::Yellow, "Heads", font, initialValue);
+    headsButton = std::make_shared<SelectedButton>(sf::Vector2f((this->window->getSize().x) * 0.6f, this->window->getSize().y * 0.8), sf::Vector2f(100, 50), sf::Color::Cyan , "Heads", font, initialValue);
 
     int anotherValue = 1; // Inna wartoœæ dla tailsButton
-    tailsButton = std::make_shared<SelectedButton>(sf::Vector2f((this->window->getSize().x - 100) * 0.4f, this->window->getSize().y * 0.8), sf::Vector2f(100, 50), sf::Color::Magenta, "Tails", font, anotherValue);
+    tailsButton = std::make_shared<SelectedButton>(sf::Vector2f((this->window->getSize().x) * 0.4f, this->window->getSize().y * 0.8), sf::Vector2f(100, 50), sf::Color::Magenta, "Tails", font, anotherValue);
 
     // Initialize game state
     result = "Click the button to flip the coin!";
     this->initCoinEntity();
     this->clear();
-    
+    spinNumber = -1;
 }
 
 void CoinflipGame::runWindow() {
@@ -58,33 +58,38 @@ void CoinflipGame::handleEvents() {
             close();
         }
         if (event.type == sf::Event::MouseButtonPressed) {
-            if (flipButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
+            if (spinNumber <= 0 && (headsButton->getSelected() || tailsButton->getSelected()) && flipButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
                 // Randomly determine the result of the coin flip
                 spinNumber=rand() % 6 +1;
                 //result = std::to_string(spinNumber);Used to check rand generator
-                result = "";
+
             }
-            else if (exitButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
+            else if (spinNumber<=0 && exitButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
                 // Close the window if the exit button is clicked
+                
                 this->isOpen = false;
             }
-            else if (headsButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
+            else if (spinNumber <= 0 && headsButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
+                spinNumber = -1;
+                result = "Click the button to flip the coin!";
                 headsButton->setSelected(!headsButton->getSelected());
                 if (tailsButton->getSelected())
                     tailsButton->setSelected(false);
             }
-            else if (tailsButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
+            else if (spinNumber <= 0 && tailsButton->isClicked(sf::Vector2f(event.mouseButton.x, event.mouseButton.y))) {
+                spinNumber = -1;
+                result = "Click the button to flip the coin!";
                 tailsButton->setSelected(!tailsButton->getSelected());
                 if (headsButton->getSelected())
                     headsButton->setSelected(false);
             }
-
+            
         }
     }
 }
 
 void CoinflipGame::update() {
-    
+    this->tossCoin();
 }
 
 void CoinflipGame::render() {
@@ -111,7 +116,7 @@ void CoinflipGame::render() {
     headsButton->draw(window);
     tailsButton->draw(window);
     
-    this->tossCoin();
+    
     display();
 }
 
@@ -165,12 +170,15 @@ void CoinflipGame::tossCoin()
             coinEntity[0].scale(1,1 - scalar);
         }
     }
-    if (result.length() >= 6) {
-        result.erase(result.length() - 6, 6);
-    }
 
-        result = result + ((show) ? " Heads" : " Tails");
-        
+    if (spinNumber == 0) {
+        result="";
+        result = result + ((show) ? " Heads " : " Tails ");
+        if (show == headsButton->getSelected())
+            result = result + "You win";
+        else
+            result = result + "You lose";
+    }
    
     
 
