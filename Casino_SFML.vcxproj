@@ -137,6 +137,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BoardsForBets.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Casino_SFML.cpp" />
     <ClCompile Include="CoinflipGame.cpp" />
@@ -146,6 +147,7 @@
     <ClCompile Include="TitleWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BoardsForBets.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="CoinflipGame.h" />
     <ClInclude Include="GraphicalObject.h" />

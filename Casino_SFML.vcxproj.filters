@@ -38,6 +38,9 @@
     <Filter Include="Objects\Text">
       <UniqueIdentifier>{1f73cb85-f561-4ef0-99ae-68bf085b3283}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Windows\RouletteGame\BoardForBets">
+      <UniqueIdentifier>{f89b0721-c27e-45dc-8138-21ae99ab2bc8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Casino_SFML.cpp">
@@ -60,6 +63,9 @@
     </ClCompile>
     <ClCompile Include="Text.cpp">
       <Filter>Objects\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="BoardsForBets.cpp">
+      <Filter>Windows\RouletteGame\BoardForBets</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +92,9 @@
     </ClInclude>
     <ClInclude Include="Text.h">
       <Filter>Objects\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="BoardsForBets.h">
+      <Filter>Windows\RouletteGame\BoardForBets</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

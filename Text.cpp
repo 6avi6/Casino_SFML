@@ -135,3 +135,8 @@ void Text::handleEvent(const sf::Event& event) {
 const bool Text::getIsClicked() {
     return this->isClicked;
 }
+
+std::string Text::getString()
+{
+    return this->string;
+}

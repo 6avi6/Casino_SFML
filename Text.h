@@ -18,6 +18,7 @@ public:
     bool contains(const sf::Vector2f& point);
     void handleEvent(const sf::Event& event);
     const bool getIsClicked();
+    std::string getString();
     sf::Color colorOfText;
 private:
     sf::Vector2f postion;

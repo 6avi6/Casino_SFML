@@ -8,6 +8,11 @@ RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) : isSpinnin
     // Load the font
     font = readFont("Assets/Fonts/arial.ttf");
 
+    // Initialize background texture and sprite
+    backgroundTexture = readTexture("Assets/Pics/Roulette/background.png");
+    background.setTexture(backgroundTexture);
+    background.setScale((this->window->getSize().x / this->background.getGlobalBounds().getSize().x)*1.2f, this->window->getSize().y / background.getGlobalBounds().getSize().y);
+
     // Initialize result text
     resultText.setFont(font);
     resultText.setCharacterSize(24);
@@ -16,15 +21,15 @@ RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) : isSpinnin
     resultText.setString("Click Spin to Start");
 
     // Create buttons
-    spinButton = std::make_shared<Button>(sf::Vector2f(400, 300), sf::Vector2f(200, 50), sf::Color::Green, "Spin", font);
+    spinButton = std::make_shared<Button>(sf::Vector2f(115, 120), sf::Vector2f(200, 50), sf::Color::Green, "Spin", font);
     exitButton = std::make_shared<Button>(sf::Vector2f(750, 25), sf::Vector2f(100, 50), sf::Color::Red, "Exit", font);
 
     // Load the roulette wheel texture
     wheelTexture = readTexture("Assets/Pics/Roulette/roulette_wheel.png");
     wheelSprite.setTexture(wheelTexture);
-    wheelSprite.scale(0.5, 0.5);
+    wheelSprite.scale(0.3, 0.3);
     wheelSprite.setOrigin(wheelTexture.getSize().x / 2, wheelTexture.getSize().y / 2);
-    wheelSprite.setPosition(400, 300);
+    wheelSprite.setPosition(400, 250);
 
     this->wheelSprite.setRotation(180.f);
     int resultNumber = calculateResult();
@@ -41,14 +46,18 @@ RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) : isSpinnin
     arrow.setPoint(2, sf::Vector2f(25, -75));       // Bottom-left point
     arrow.setOrigin(arrow.getGlobalBounds().getSize().x / 2, arrow.getGlobalBounds().getSize().y / 2);
     // Set the position of the arrow shape
-    arrow.setPosition(400, 270);
+    arrow.setPosition(400, 220);
     arrow.setOutlineThickness(2);
     arrow.setOutlineColor(sf::Color::White);
     // Set the fill color
     arrow.setFillColor(sf::Color::Red);
+    arrow.scale(0.5, 0.5);
 
     this->bid = std::make_shared<Text>(font,"Write amount to bid");
     this->bid->setPosition(15.f, 50.f);
+
+
+    this->board = std::make_shared<BoardsForBets>(sf::Vector2f(this->window->getSize().x*0.5f, this->window->getSize().y * 0.8f), sf::Vector2f(1, 1), font);
 }
 
 void RouletteGame::runWindow() {
@@ -95,7 +104,11 @@ void RouletteGame::handleEvents() {
         if (event.type == sf::Event::TextEntered && bid->getIsClicked() == true) {
             bid->handleEvent(event);
         }
+        if(spinSpeed<=0)
+        this->board->update(event);
     }
+
+    
 }
 
 void RouletteGame::update() {
@@ -114,6 +127,7 @@ void RouletteGame::update() {
             result = "Result: " + std::to_string(resultNumber);
             resultText.setString(result);
             std::cout << "Results: " << resultNumber << std::endl;
+            calculateAndDisplayResult(resultNumber);
         }
         wheelSprite.setRotation(wheelAngle);
     }
@@ -121,29 +135,42 @@ void RouletteGame::update() {
 
 void RouletteGame::render() {
     clear();
+    window->draw(background);
     window->draw(wheelSprite);
     spinButton->draw(window);
     exitButton->draw(window);
     window->draw(resultText);
     window->draw(arrow);
     bid->draw(window);
+    board->draw(window);
     display();
 }
 
 void RouletteGame::spinWheel() {
     if (!isSpinning) {
         isSpinning = true;
-        spinSpeed = ((rand() % 50) / 10.f) + 5.f; // Initial speed
+        spinSpeed = this->generateSpinSpeed() + 5.f; // Initial speed
         std::cout <<"Speed: "<< spinSpeed << std::endl;
         
 
     }
 }
+float RouletteGame::generateSpinSpeed()
+{
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+
+    // Using the <random> library for better randomness
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<float> dist(5.0f, 10.0f);
+
+    return dist(gen);
+}
 int RouletteGame::calculateResult() {
     // Calculate the result number based on the current wheel angle
     int resultNumber = static_cast<int>(std::ceil((180 - (this->wheelSprite.getRotation()) -5.f)/ (360.f / 37.f))); // 0 to 36
     std::cout << "rotation " << this->wheelSprite.getRotation() << std::endl;
-    std::cout << "num " << resultNumber << std::endl;
+
     // Adjust the result number based on 180-degree rotation
     if (resultNumber < 0) {
         resultNumber += 37; // Ensure the number is positive
@@ -156,6 +183,76 @@ int RouletteGame::calculateResult() {
         0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24,
         16, 33, 1, 20, 14, 31, 9, 22, 18, 29, 7, 28, 12, 35, 3, 26
     };
+    static const sf::Color numberColors[37] = {
+        sf::Color::Green, // 0
+        sf::Color::Black, // 1
+        sf::Color::Red,   // 2
+        sf::Color::Black, // 3
+        sf::Color::Red,   // 4
+        sf::Color::Black, // 5
+        sf::Color::Red,   // 6
+        sf::Color::Black, // 7
+        sf::Color::Red,   // 8
+        sf::Color::Black, // 9
+        sf::Color::Red,   // 10
+        sf::Color::Black, // 11
+        sf::Color::Red,   // 12
+        sf::Color::Black, // 13
+        sf::Color::Red,   // 14
+        sf::Color::Black, // 15
+        sf::Color::Red,   // 16
+        sf::Color::Black, // 17
+        sf::Color::Red,   // 18
+        sf::Color::Red,   // 19
+        sf::Color::Black, // 20
+        sf::Color::Red,   // 21
+        sf::Color::Black, // 22
+        sf::Color::Red,   // 23
+        sf::Color::Black, // 24
+        sf::Color::Red,   // 25
+        sf::Color::Black, // 26
+        sf::Color::Red,   // 27
+        sf::Color::Black, // 28
+        sf::Color::Red,   // 29
+        sf::Color::Black, // 30
+        sf::Color::Red,   // 31
+        sf::Color::Black, // 32
+        sf::Color::Red,   // 33
+        sf::Color::Black, // 34
+        sf::Color::Red,   // 35
+        sf::Color::Black  // 36
+    };
 
+    
+    std::cout << "Numer: " << oppositeNumbers[resultNumber]
+        << " Kolor: " << ((numberColors[oppositeNumbers[resultNumber]] == sf::Color::Red) ? "Czerwony" :
+            (numberColors[oppositeNumbers[resultNumber]] == sf::Color::Black) ? "Czarny" : "Zielony")
+        << std::endl;
+/**/
     return oppositeNumbers[resultNumber];
+}
+
+void RouletteGame::calculateAndDisplayResult(int resultNumber) {
+    // Obliczanie wygranej na podstawie planszy
+    float winnings = board->calculateWinnings(resultNumber);
+
+    // Pobranie stringa z bid i próba konwersji na liczbê
+    std::string inputString = bid->getString();
+    int bidAmount = 0;
+
+    // Walidacja czy inputString jest liczb¹ za pomoc¹ ranges
+    if (std::ranges::all_of(inputString, [](char c) { return std::isdigit(c); })) {
+        bidAmount = std::stoi(inputString);
+    }
+
+    // Logika wyœwietlania wyniku i wygranej
+    std::cout << "Wygrana: " << winnings << std::endl;
+
+    // Przyk³adowe u¿ycie wyniku jako tekstu na ekranie
+    resultText.setString("WYGRANA: " + std::to_string(bidAmount * winnings));
+    resultText.setFont(font);
+    resultText.setPosition(10, 10);
+    resultText.setCharacterSize(24);
+
+    // Inne operacje zwi¹zane z wyœwietlaniem wyniku na ekranie
 }

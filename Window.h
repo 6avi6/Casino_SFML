@@ -68,6 +68,15 @@ public:
         return image;
     }
 
+    sf::Sprite background;
+    sf::Texture backgroundTexture;
+    void loadBackground(const std::string& fontPath) {
+        // Initialize background texture and sprite
+        backgroundTexture = readTexture(fontPath);
+        background.setTexture(backgroundTexture);
+    }
+
+
 private:
     // Vector to hold drawable objects
     std::vector<std::shared_ptr<GraphicalObject>> drawableObjects;

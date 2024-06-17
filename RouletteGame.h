@@ -6,7 +6,12 @@
 #include "Window.h"
 #include "Button.h"
 #include "Text.h"
+#include "BoardsForBets.h"
 
+#include <ranges>
+#include <ctime>
+#include <cstdlib>
+#include <random>
 #include <vector>
 #include <cmath>
 class RouletteGame : public Window {
@@ -25,7 +30,10 @@ private:
     void update();
     void render();
     void spinWheel();
+    float generateSpinSpeed();
     int calculateResult();
+    // Metoda do obliczania i wyœwietlania wyniku
+    void calculateAndDisplayResult(int resultNumber);
 
     sf::Font font;
     sf::Text resultText;
@@ -44,6 +52,7 @@ private:
 
     std::shared_ptr<Text> bid;
 
+    std::shared_ptr<BoardsForBets> board;
 };
 
 #endif // ROULETTEGAME_H
