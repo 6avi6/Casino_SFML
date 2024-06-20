@@ -1,5 +1,5 @@
 #include "RouletteGame.h"
-#include <iostream>
+
 
 // Constructor to initialize the game
 RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) : isSpinning(false), wheelAngle(0.f), spinSpeed(0.0f) {
@@ -180,47 +180,48 @@ int RouletteGame::calculateResult() {
     // Assuming a standard European roulette wheel, the opposite positions are:
     // 0 <-> 0, 1 <-> 18, 2 <-> 19, ..., 36 <-> 36
     static const int oppositeNumbers[37] = {
-        0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24,
+        0, 32, 15, 19, 4, 21, 2, 25, 17, 27, 6, 34, 13, 36, 11, 30, 8, 23, 10, 5, 24,
         16, 33, 1, 20, 14, 31, 9, 22, 18, 29, 7, 28, 12, 35, 3, 26
     };
     static const sf::Color numberColors[37] = {
-        sf::Color::Green, // 0
-        sf::Color::Black, // 1
-        sf::Color::Red,   // 2
-        sf::Color::Black, // 3
-        sf::Color::Red,   // 4
-        sf::Color::Black, // 5
-        sf::Color::Red,   // 6
-        sf::Color::Black, // 7
-        sf::Color::Red,   // 8
-        sf::Color::Black, // 9
-        sf::Color::Red,   // 10
-        sf::Color::Black, // 11
-        sf::Color::Red,   // 12
-        sf::Color::Black, // 13
-        sf::Color::Red,   // 14
-        sf::Color::Black, // 15
-        sf::Color::Red,   // 16
-        sf::Color::Black, // 17
-        sf::Color::Red,   // 18
-        sf::Color::Red,   // 19
-        sf::Color::Black, // 20
-        sf::Color::Red,   // 21
-        sf::Color::Black, // 22
-        sf::Color::Red,   // 23
-        sf::Color::Black, // 24
-        sf::Color::Red,   // 25
-        sf::Color::Black, // 26
-        sf::Color::Red,   // 27
-        sf::Color::Black, // 28
-        sf::Color::Red,   // 29
-        sf::Color::Black, // 30
-        sf::Color::Red,   // 31
-        sf::Color::Black, // 32
-        sf::Color::Red,   // 33
-        sf::Color::Black, // 34
-        sf::Color::Red,   // 35
-        sf::Color::Black  // 36
+        sf::Color::Green, // 0 - Green
+        sf::Color::Black, // 1 - Black
+        sf::Color::Red,   // 2 - Red
+        sf::Color::Black, // 3 - Black
+        sf::Color::Red,   // 4 - Red
+        sf::Color::Black, // 5 - Black
+        sf::Color::Red,   // 6 - Red
+        sf::Color::Black, // 7 - Black
+        sf::Color::Red,   // 8 - Red
+        sf::Color::Black, // 9 - Black
+        sf::Color::Red,   // 10 - Red
+        sf::Color::Red,   // 11 - Red
+        sf::Color::Black, // 12 - Black
+        sf::Color::Red,   // 13 - Red
+        sf::Color::Black, // 14 - Black
+        sf::Color::Red,   // 15 - Red
+        sf::Color::Black, // 16 - Black
+        sf::Color::Red,   // 17 - Red
+        sf::Color::Black,   // 18 - Black
+        sf::Color::Black, // 19 - Black
+        sf::Color::Red,   // 20 - Red
+        sf::Color::Black, // 21 - Black
+        sf::Color::Red,   // 22 - Red
+        sf::Color::Black, // 23 - Black
+        sf::Color::Red,   // 24 - Red
+        sf::Color::Black, // 25 - Black
+        sf::Color::Red,   // 26 - Red
+        sf::Color::Black, // 27 - Black
+        sf::Color::Red,   // 28 - Red
+        sf::Color::Red,   // 29 - Red
+        sf::Color::Black, // 30 - Black
+        sf::Color::Red,   // 31 - Red
+        sf::Color::Black, // 32 - Black
+        sf::Color::Red,   // 33 - Red
+        sf::Color::Black, // 34 - Black
+        sf::Color::Red,   // 35 - Red
+        sf::Color::Black  // 36 - Black
+
     };
 
     
@@ -241,7 +242,8 @@ void RouletteGame::calculateAndDisplayResult(int resultNumber) {
     int bidAmount = 0;
 
     // Walidacja czy inputString jest liczb¹ za pomoc¹ ranges
-    if (std::ranges::all_of(inputString, [](char c) { return std::isdigit(c); })) {
+    if (std::ranges::all_of(inputString, [](char c) { return std::isdigit(c); }))//ranges used
+    {
         bidAmount = std::stoi(inputString);
     }
 

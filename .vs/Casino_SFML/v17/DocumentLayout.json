@@ -7,20 +7,12 @@
       "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:RouletteGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\RouletteGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:RouletteGame.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\BoardsForBets.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:BoardsForBets.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\SelectedButton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:SelectedButton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\BoardsForBets.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:BoardsForBets.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 133,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,32 +35,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BoardsForBets.h",
-              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\BoardsForBets.h",
-              "RelativeDocumentMoniker": "BoardsForBets.h",
-              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\BoardsForBets.h",
-              "RelativeToolTip": "BoardsForBets.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-17T09:56:48.267Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RouletteGame.h",
-              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\RouletteGame.h",
-              "RelativeDocumentMoniker": "RouletteGame.h",
-              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\RouletteGame.h",
-              "RelativeToolTip": "RouletteGame.h",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAAoAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-17T10:12:44.765Z",
-              "EditorCaption": ""
             }
           ]
         },
@@ -78,7 +44,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "SelectedButton.h",
               "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\SelectedButton.h",
               "RelativeDocumentMoniker": "SelectedButton.h",
@@ -86,18 +52,17 @@
               "RelativeToolTip": "SelectedButton.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-17T11:51:53.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T11:51:53.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "BoardsForBets.cpp",
               "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\BoardsForBets.cpp",
               "RelativeDocumentMoniker": "BoardsForBets.cpp",
               "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\BoardsForBets.cpp",
               "RelativeToolTip": "BoardsForBets.cpp",
-              "ViewState": "AQIAAGsAAAAAAAAAAAAAAHoAAAAKAAAA",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAAAIwAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-16T17:12:02.295Z",
               "EditorCaption": ""
@@ -110,7 +75,7 @@
               "RelativeDocumentMoniker": "RouletteGame.cpp",
               "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\RouletteGame.cpp",
               "RelativeToolTip": "RouletteGame.cpp",
-              "ViewState": "AQIAAKYAAAAAAAAAAAAAAAEBAAABAAAA",
+              "ViewState": "AQIAALYAAAAAAAAAAAAiwMwAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-06-17T10:00:41.746Z",
               "EditorCaption": ""
