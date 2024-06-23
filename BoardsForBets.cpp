@@ -20,16 +20,37 @@ void BoardsForBets::update(sf::Event event)
     if (event.type == sf::Event::MouseButtonPressed)
     {
         if (event.mouseButton.button == sf::Mouse::Left)
-        {
+        {   
+            bool selectedB = false;
+            bool selectedBR = false;
             sf::Vector2f mousePos(event.mouseButton.x, event.mouseButton.y);
-            for (auto& field : boardFields)
-            {
-                if (field->isClicked(mousePos))
-                {
-                    // Handle the event for the button
-                    field->setSelected(!field->getSelected());
+            for (size_t i = 0; i < boardFields.size() - 2 ; ++i) {
+                if (boardFields[i]->getSelected()) {
+                        selectedB = true;
                 }
             }
+
+            if (!selectedB) {
+                if (boardFields[boardFields.size() - 2]->isClicked(mousePos)) {
+                    boardFields[boardFields.size() - 2]->setSelected(!boardFields[boardFields.size() - 2]->getSelected());
+                    boardFields[boardFields.size() - 1]->setSelected(false);
+
+                }
+                else if (boardFields[boardFields.size() - 1]->isClicked(mousePos)) {
+                    boardFields[boardFields.size() - 1]->setSelected(!boardFields[boardFields.size() - 1]->getSelected());
+                    boardFields[boardFields.size() - 2]->setSelected(false);
+                }
+            }
+            if (boardFields[boardFields.size() - 2]->getSelected() || boardFields[boardFields.size() - 1]->getSelected())
+                selectedBR = true;
+
+            for (size_t i = 0; i < boardFields.size()-2 && !selectedBR; ++i) {
+                if (boardFields[i]->isClicked(mousePos)) {
+                    // Handle the event for the button
+                    boardFields[i]->setSelected(!boardFields[i]->getSelected());
+                }
+            }
+
         }
     }
 }
@@ -187,7 +208,7 @@ float BoardsForBets::calculateWinnings(int resultNumber) const {
             if(boardFields[i]->getSelected()){
                 if (boardFields[i]->getSelected() && boardFields[i]->getValue() == resultNumber) {
                     multiplier = 36.0f; // Payout for single number bet is 36 times the bet amount
-                    std::cout << "WIN ";
+                    std::cout << "Liczba wygrwajaca: "<<resultNumber<< " Wartoœæ przycisku: "<< boardFields[i]->getValue()<<"wartoœæ i: " <<i<<std::endl;
                 }
                 c++;
             }

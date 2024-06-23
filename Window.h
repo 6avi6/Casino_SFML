@@ -75,7 +75,11 @@ public:
         backgroundTexture = readTexture(fontPath);
         background.setTexture(backgroundTexture);
     }
-
+    std::string to_string_with_precision(float value, int precision = 2) {
+        std::ostringstream out;
+        out << std::fixed << std::setprecision(precision) << value;
+        return out.str();
+    }
 
 private:
     // Vector to hold drawable objects

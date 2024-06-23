@@ -8,6 +8,7 @@
 
 #include "CoinflipGame.h"
 #include "RouletteGame.h"
+#include "TableScores.h"
 
 // TitleWindow class inheriting privately from the Window class
 class TitleWindow : private Window {
@@ -28,6 +29,7 @@ private:
     // Buttons in the window
     std::shared_ptr<Button> rouletteButton;
     std::shared_ptr<Button> coinflipButton;
+    std::shared_ptr<Button> scoresButton;
     std::shared_ptr<Button> exitButton;
 
     // Background texture and sprite

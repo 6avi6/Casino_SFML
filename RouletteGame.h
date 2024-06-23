@@ -7,6 +7,7 @@
 #include "Button.h"
 #include "Text.h"
 #include "BoardsForBets.h"
+#include "EndGameScreen.h"
 
 #include <ranges>
 #include <ctime>
@@ -37,6 +38,7 @@ private:
 
     sf::Font font;
     sf::Text resultText;
+    sf::Text cashBalance;
     std::shared_ptr<Button> spinButton;
     std::shared_ptr<Button> exitButton;
     sf::ConvexShape arrow;
@@ -53,6 +55,10 @@ private:
     std::shared_ptr<Text> bid;
 
     std::shared_ptr<BoardsForBets> board;
+
+    double playerTopScore;
+    double playerCredits;
+    sf::Text textPlayerCredits;
 };
 
 #endif // ROULETTEGAME_H

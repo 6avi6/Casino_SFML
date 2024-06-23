@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\EndGameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:EndGameScreen.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\RouletteGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:RouletteGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\BoardsForBets.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:BoardsForBets.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|C:\\Users\\Dawid\\Desktop\\Casino_SFML\\SelectedButton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{226AF86C-9E04-4269-9409-62DD4E8C0040}|Casino_SFML.vcxproj|solutionrelative:SelectedButton.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +17,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 133,
+          "DockedWidth": 104,
           "SelectedChildIndex": -1,
           "Children": [
             {
@@ -39,45 +35,33 @@
           ]
         },
         {
-          "DockedWidth": 180,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 162,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SelectedButton.h",
-              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\SelectedButton.h",
-              "RelativeDocumentMoniker": "SelectedButton.h",
-              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\SelectedButton.h",
-              "RelativeToolTip": "SelectedButton.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-06-17T11:51:53.879Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BoardsForBets.cpp",
-              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\BoardsForBets.cpp",
-              "RelativeDocumentMoniker": "BoardsForBets.cpp",
-              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\BoardsForBets.cpp",
-              "RelativeToolTip": "BoardsForBets.cpp",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAAAIwAAAAmAAAA",
+              "DocumentIndex": 0,
+              "Title": "EndGameScreen.cpp",
+              "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\EndGameScreen.cpp",
+              "RelativeDocumentMoniker": "EndGameScreen.cpp",
+              "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\EndGameScreen.cpp",
+              "RelativeToolTip": "EndGameScreen.cpp",
+              "ViewState": "AQIAALYAAAAAAAAAAAAqwMUAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-06-16T17:12:02.295Z",
+              "WhenOpened": "2024-06-23T21:48:09.022Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "RouletteGame.cpp",
               "DocumentMoniker": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\RouletteGame.cpp",
               "RelativeDocumentMoniker": "RouletteGame.cpp",
               "ToolTip": "C:\\Users\\Dawid\\Desktop\\Casino_SFML\\RouletteGame.cpp",
               "RelativeToolTip": "RouletteGame.cpp",
-              "ViewState": "AQIAALYAAAAAAAAAAAAiwMwAAAApAAAA",
+              "ViewState": "AQIAAKkAAAAAAAAAAAAAAGUAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-06-17T10:00:41.746Z",
+              "WhenOpened": "2024-06-23T21:29:34.495Z",
               "EditorCaption": ""
             }
           ]

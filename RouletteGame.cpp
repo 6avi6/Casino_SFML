@@ -2,7 +2,8 @@
 
 
 // Constructor to initialize the game
-RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) : isSpinning(false), wheelAngle(0.f), spinSpeed(0.0f) {
+RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) : 
+    isSpinning(false), wheelAngle(0.f), spinSpeed(0.0f),playerCredits(100),playerTopScore(100) {
     this->window = std::move(window);
 
     // Load the font
@@ -20,6 +21,13 @@ RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) : isSpinnin
     resultText.setPosition(350, 50);
     resultText.setString("Click Spin to Start");
 
+    cashBalance.setFont(font);
+    cashBalance.setCharacterSize(24);
+    cashBalance.setFillColor(sf::Color::White);
+    cashBalance.setPosition(600, 120);
+    cashBalance.setString("Funds:");
+
+
     // Create buttons
     spinButton = std::make_shared<Button>(sf::Vector2f(115, 120), sf::Vector2f(200, 50), sf::Color::Green, "Spin", font);
     exitButton = std::make_shared<Button>(sf::Vector2f(750, 25), sf::Vector2f(100, 50), sf::Color::Red, "Exit", font);
@@ -35,6 +43,12 @@ RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) : isSpinnin
     int resultNumber = calculateResult();
     result = "Result: " + std::to_string(resultNumber);
     resultText.setString(result);
+
+    textPlayerCredits.setFont(font);
+    textPlayerCredits.setCharacterSize(24);
+    textPlayerCredits.setFillColor(sf::Color::White);
+    textPlayerCredits.setString(to_string_with_precision(playerCredits, 2) +" $");
+    textPlayerCredits.setPosition(600, 150);
 
     // Define a triangle shape (arrow shape)
     
@@ -89,16 +103,42 @@ void RouletteGame::handleEvents() {
         }
         if (event.type == sf::Event::MouseButtonPressed) {
             sf::Vector2f mousePos(event.mouseButton.x, event.mouseButton.y);
-            if (spinButton->isClicked(mousePos)) {
+            if (spinButton->isClicked(mousePos) && bid->getIsClicked()==false) {
                 spinWheel();
             }
             else if (exitButton->isClicked(mousePos)) {
                 isOpen = false;
             }
             if (bid->contains(static_cast<sf::Vector2f>(mousePos))) {
+                if (bid->getIsClicked()) {
+                    if (playerCredits - std::stod(bid->getString()) >= 0) {
+                        playerCredits = playerCredits -std::stod(bid->getString());
+                    }
+                    else {
+                        bid->setString(to_string_with_precision(playerCredits));
+                        playerCredits = 0;
+
+                    }
+                }
+                else {
+                    try {
+                        // Attempt to convert the string to a double and add to playerCredits
+                        playerCredits += std::stod(bid->getString());
+                    }
+                    catch (const std::invalid_argument&) {
+                        // If conversion fails, set the bid string to "0"
+                        bid->setString("0");
+                    }
+                    catch (const std::out_of_range&) {
+                        // If conversion is out of range, set the bid string to "0"
+                        bid->setString("0");
+                    }
+
+                }
+                textPlayerCredits.setString(to_string_with_precision(playerCredits, 2) + " $");
                 bid->clicked();
             }
-
+            
 
         }
         if (event.type == sf::Event::TextEntered && bid->getIsClicked() == true) {
@@ -131,15 +171,38 @@ void RouletteGame::update() {
         }
         wheelSprite.setRotation(wheelAngle);
     }
+    int bidNumber = 0;
+    try {
+        // Attempt to convert the string to a double and add to playerCredits
+       bidNumber= std::stod(bid->getString());
+    }
+    catch (const std::invalid_argument&) {
+        // If conversion fails, set the bid string to "0"
+        bidNumber = 0;
+    }
+    catch (const std::out_of_range&) {
+        // If conversion is out of range, set the bid string to "0"
+        bidNumber = 0;
+    }
+
+
+    if ( (playerCredits+bidNumber<=0) ) {
+        this->clear();
+        std::shared_ptr<EndGameScreen> endGameScreen=std::make_shared<EndGameScreen>(this->window, this->playerTopScore);
+        endGameScreen->runWindow();
+        this->isOpen = false;
+    }
 }
 
 void RouletteGame::render() {
     clear();
     window->draw(background);
+    window->draw(textPlayerCredits);
     window->draw(wheelSprite);
     spinButton->draw(window);
     exitButton->draw(window);
     window->draw(resultText);
+    window->draw(cashBalance);
     window->draw(arrow);
     bid->draw(window);
     board->draw(window);
@@ -251,10 +314,15 @@ void RouletteGame::calculateAndDisplayResult(int resultNumber) {
     std::cout << "Wygrana: " << winnings << std::endl;
 
     // Przyk³adowe u¿ycie wyniku jako tekstu na ekranie
-    resultText.setString("WYGRANA: " + std::to_string(bidAmount * winnings));
-    resultText.setFont(font);
-    resultText.setPosition(10, 10);
-    resultText.setCharacterSize(24);
+    
+    playerCredits +=bidAmount * winnings- std::stod(bid->getString());
+    if (playerTopScore < playerCredits + std::stod(bid->getString()))
+        playerTopScore = playerCredits + std::stod(bid->getString());
+
+    std::cout << "Top Score: " << playerTopScore << std::endl;
+        
+    textPlayerCredits.setString(to_string_with_precision(playerCredits, 2) + " $");
+
 
     // Inne operacje zwi¹zane z wyœwietlaniem wyniku na ekranie
 }

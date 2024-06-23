@@ -41,6 +41,12 @@
     <Filter Include="Windows\RouletteGame\BoardForBets">
       <UniqueIdentifier>{f89b0721-c27e-45dc-8138-21ae99ab2bc8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Windows\EndGameScreen">
+      <UniqueIdentifier>{f0f5a95d-db20-4fec-86c2-f54db940f831}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows\TableScores">
+      <UniqueIdentifier>{8535d81e-09c2-4b03-bd30-2cfa15995e89}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Casino_SFML.cpp">
@@ -66,6 +72,12 @@
     </ClCompile>
     <ClCompile Include="BoardsForBets.cpp">
       <Filter>Windows\RouletteGame\BoardForBets</Filter>
+    </ClCompile>
+    <ClCompile Include="EndGameScreen.cpp">
+      <Filter>Windows\EndGameScreen</Filter>
+    </ClCompile>
+    <ClCompile Include="TableScores.cpp">
+      <Filter>Windows\TableScores</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +107,12 @@
     </ClInclude>
     <ClInclude Include="BoardsForBets.h">
       <Filter>Windows\RouletteGame\BoardForBets</Filter>
+    </ClInclude>
+    <ClInclude Include="EndGameScreen.h">
+      <Filter>Windows\EndGameScreen</Filter>
+    </ClInclude>
+    <ClInclude Include="TableScores.h">
+      <Filter>Windows\TableScores</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

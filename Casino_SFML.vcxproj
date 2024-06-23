@@ -141,8 +141,10 @@
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Casino_SFML.cpp" />
     <ClCompile Include="CoinflipGame.cpp" />
+    <ClCompile Include="EndGameScreen.cpp" />
     <ClCompile Include="RouletteGame.cpp" />
     <ClCompile Include="SelectedButton.cpp" />
+    <ClCompile Include="TableScores.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="TitleWindow.cpp" />
   </ItemGroup>
@@ -150,9 +152,11 @@
     <ClInclude Include="BoardsForBets.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="CoinflipGame.h" />
+    <ClInclude Include="EndGameScreen.h" />
     <ClInclude Include="GraphicalObject.h" />
     <ClInclude Include="RouletteGame.h" />
     <ClInclude Include="SelectedButton.h" />
+    <ClInclude Include="TableScores.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="TitleWindow.h" />
     <ClInclude Include="Window.h" />

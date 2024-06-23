@@ -1,0 +1,10 @@
+1200.5 Alice
+1100 Bob
+1000 Baca
+950.25 Charlie
+800.75 David
+750 Eve
+600 Frank
+550.5 Grace
+300 Ada
+200 Adam@

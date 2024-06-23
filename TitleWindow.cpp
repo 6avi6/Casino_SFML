@@ -36,8 +36,14 @@ TitleWindow::TitleWindow(std::shared_ptr<sf::RenderWindow> window) {
     coinflipButton = std::make_shared<Button>(coinflipButtonPosition, buttonSize, buttonColor, "Coinflip", font);
     drawableObjects.push_back(coinflipButton);
 
+    // Create scoresButton
+    sf::Vector2f scoresButtonPosition(this->window->getSize().x * 0.35f, 380.f);
+    scoresButton = std::make_shared<Button>(scoresButtonPosition, buttonSize, sf::Color::Yellow, "Scores", font);
+    drawableObjects.push_back(scoresButton);
+
+
     // Create exitButton
-    sf::Vector2f exitButtonPosition(this->window->getSize().x * 0.5f, 380.f);
+    sf::Vector2f exitButtonPosition(this->window->getSize().x * 0.65f, 380.f);
     exitButton = std::make_shared<Button>(exitButtonPosition, buttonSize, sf::Color::Red, "Exit", font);
     drawableObjects.push_back(exitButton);
 }
@@ -71,6 +77,13 @@ void TitleWindow::runWindow() {
                         // Handle button click for coinflip
                         CoinflipGame coinflipGame(this->window);
                         coinflipGame.runWindow();
+                    }
+
+                    // Check if coinflipButton is clicked
+                    if (scoresButton->isClicked(mousePos)) {
+                        // Handle button click for coinflip
+                        TableScores scores(this->window);
+                        scores.runWindow();
                     }
                 }
             }
