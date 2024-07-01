@@ -7,4 +7,4 @@
 600 Frank
 550.5 Grace
 300 Ada
-50 SMRLD
+100 Add

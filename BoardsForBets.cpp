@@ -205,7 +205,6 @@ float BoardsForBets::calculateWinnings(int resultNumber) const {
         multiplier = multiplier / c;
     }
 
-    std::cout << "NUMEREK " << resultNumber << std::endl;
 
     return multiplier;
 }

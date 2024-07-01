@@ -7,6 +7,7 @@
 #include <memory>
 #include <vector>
 #include "Window.h"
+#include "regex"
 
 class EndGameScreen : public Window {
 public:
