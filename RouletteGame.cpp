@@ -9,10 +9,25 @@ RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) :
     // Load the font
     font = readFont("Assets/Fonts/arial.ttf");
 
+
+
+    // Create threads to initialize the interface and roulette
+    std::thread thread1(&RouletteGame::initInterface, this);
+    std::thread thread2(&RouletteGame::initRoulette, this);
+
+    // Wait for both threads to complete
+    thread1.join();
+    thread2.join();
+
+    std::cout << "Initialization complete." << std::endl;
+
+}
+
+void RouletteGame::initInterface() {
     // Initialize background texture and sprite
     backgroundTexture = readTexture("Assets/Pics/Roulette/background.png");
     background.setTexture(backgroundTexture);
-    background.setScale((this->window->getSize().x / this->background.getGlobalBounds().getSize().x)*1.2f, this->window->getSize().y / background.getGlobalBounds().getSize().y);
+    background.setScale((this->window->getSize().x / this->background.getGlobalBounds().getSize().x) * 1.2f, this->window->getSize().y / background.getGlobalBounds().getSize().y);
 
     // Initialize result text
     resultText.setFont(font);
@@ -32,6 +47,8 @@ RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) :
     spinButton = std::make_shared<Button>(sf::Vector2f(115, 120), sf::Vector2f(200, 50), sf::Color::Green, "Spin", font);
     exitButton = std::make_shared<Button>(sf::Vector2f(750, 25), sf::Vector2f(100, 50), sf::Color::Red, "Exit", font);
 
+}
+void RouletteGame::initRoulette() {
     // Load the roulette wheel texture
     wheelTexture = readTexture("Assets/Pics/Roulette/roulette_wheel.png");
     wheelSprite.setTexture(wheelTexture);
@@ -47,11 +64,10 @@ RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) :
     textPlayerCredits.setFont(font);
     textPlayerCredits.setCharacterSize(24);
     textPlayerCredits.setFillColor(sf::Color::White);
-    textPlayerCredits.setString(to_string_with_precision(playerCredits, 2) +" $");
+    textPlayerCredits.setString(to_string_with_precision(playerCredits, 2) + " $");
     textPlayerCredits.setPosition(600, 150);
-
     // Define a triangle shape (arrow shape)
-    
+
     arrow.setPointCount(3); // Triangle has 3 points
 
     // Set the points of the triangle to form an arrow shape
@@ -67,13 +83,14 @@ RouletteGame::RouletteGame(std::shared_ptr<sf::RenderWindow> window) :
     arrow.setFillColor(sf::Color::Red);
     arrow.scale(0.5, 0.5);
 
-    this->bid = std::make_shared<Text>(font,"Write amount to bid");
+    this->bid = std::make_shared<Text>(font, "Write amount to bid");
     this->bid->setPosition(15.f, 50.f);
 
 
-    this->board = std::make_shared<BoardsForBets>(sf::Vector2f(this->window->getSize().x*0.5f, this->window->getSize().y * 0.8f), sf::Vector2f(1, 1), font);
-}
+    this->board = std::make_shared<BoardsForBets>(sf::Vector2f(this->window->getSize().x * 0.5f, this->window->getSize().y * 0.8f), sf::Vector2f(1, 1), font);
 
+
+}
 void RouletteGame::runWindow() {
     isOpen=true;
     while (window->isOpen() && isOpen) {
@@ -110,9 +127,23 @@ void RouletteGame::handleEvents() {
                 isOpen = false;
             }
             if (bid->contains(static_cast<sf::Vector2f>(mousePos))) {
+                int bidNumber = 0;
+                try {
+                    // Attempt to convert the string to a double and add to playerCredits
+                    bidNumber = std::stod(bid->getString());
+                }
+                catch (const std::invalid_argument&) {
+                    // If conversion fails, set the bid string to "0"
+                    bidNumber = 0;
+                }
+                catch (const std::out_of_range&) {
+                    // If conversion is out of range, set the bid string to "0"
+                    bidNumber = 0;
+                }
+
                 if (bid->getIsClicked()) {
-                    if (playerCredits - std::stod(bid->getString()) >= 0) {
-                        playerCredits = playerCredits -std::stod(bid->getString());
+                    if (playerCredits - bidNumber >= 0) {
+                        playerCredits = playerCredits - bidNumber;
                     }
                     else {
                         bid->setString(to_string_with_precision(playerCredits));
@@ -213,7 +244,7 @@ void RouletteGame::spinWheel() {
     if (!isSpinning) {
         isSpinning = true;
         spinSpeed = this->generateSpinSpeed() + 5.f; // Initial speed
-        std::cout <<"Speed: "<< spinSpeed << std::endl;
+        //std::cout <<"Speed: "<< spinSpeed << std::endl;
         
 
     }
@@ -232,7 +263,7 @@ float RouletteGame::generateSpinSpeed()
 int RouletteGame::calculateResult() {
     // Calculate the result number based on the current wheel angle
     int resultNumber = static_cast<int>(std::ceil((180 - (this->wheelSprite.getRotation()) -5.f)/ (360.f / 37.f))); // 0 to 36
-    std::cout << "rotation " << this->wheelSprite.getRotation() << std::endl;
+    //std::cout << "rotation " << this->wheelSprite.getRotation() << std::endl;
 
     // Adjust the result number based on 180-degree rotation
     if (resultNumber < 0) {
@@ -304,7 +335,7 @@ void RouletteGame::calculateAndDisplayResult(int resultNumber) {
     std::string inputString = bid->getString();
     int bidAmount = 0;
 
-    // Walidacja czy inputString jest liczb¹ za pomoc¹ ranges
+ 
     if (std::ranges::all_of(inputString, [](char c) { return std::isdigit(c); }))//ranges used
     {
         bidAmount = std::stoi(inputString);
@@ -314,15 +345,27 @@ void RouletteGame::calculateAndDisplayResult(int resultNumber) {
     std::cout << "Wygrana: " << winnings << std::endl;
 
     // Przyk³adowe u¿ycie wyniku jako tekstu na ekranie
-    
-    playerCredits +=bidAmount * winnings- std::stod(bid->getString());
-    if (playerTopScore < playerCredits + std::stod(bid->getString()))
-        playerTopScore = playerCredits + std::stod(bid->getString());
+    int bidNumber = 0;
+    try {
+        // Attempt to convert the string to a double and add to playerCredits
+        bidNumber = std::stod(bid->getString());
+    }
+    catch (const std::invalid_argument&) {
+        // If conversion fails, set the bid string to "0"
+        bidNumber = 0;
+    }
+    catch (const std::out_of_range&) {
+        // If conversion is out of range, set the bid string to "0"
+        bidNumber = 0;
+    }
+    playerCredits +=bidAmount * winnings- bidNumber;
+    if (playerTopScore < playerCredits + bidNumber)
+        playerTopScore = playerCredits + bidNumber;
 
     std::cout << "Top Score: " << playerTopScore << std::endl;
         
     textPlayerCredits.setString(to_string_with_precision(playerCredits, 2) + " $");
 
 
-    // Inne operacje zwi¹zane z wyœwietlaniem wyniku na ekranie
+
 }

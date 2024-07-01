@@ -26,6 +26,7 @@ CoinflipGame::CoinflipGame(std::shared_ptr<sf::RenderWindow> window) {
     result = "Click the button to flip the coin!";
     this->initCoinEntity();
     this->clear();
+    loadBackground("Assets/Pics/Roulette/background.png");
     spinNumber = -1;
 }
 
@@ -94,7 +95,7 @@ void CoinflipGame::update() {
 
 void CoinflipGame::render() {
     clear();
-
+    window->draw(this->background);
     flipButton->draw(window);
     exitButton->draw(window);
 
@@ -106,6 +107,7 @@ void CoinflipGame::render() {
     resultText.setFillColor(sf::Color::White);
     resultText.setOrigin(resultText.getGlobalBounds().getSize().x * 0.5, resultText.getGlobalBounds().getSize().y * 0.5);
     resultText.setPosition(this->window->getSize().x * 0.5f, this->window->getSize().y * 0.7);
+
     window->draw(resultText);
 
     if (show)

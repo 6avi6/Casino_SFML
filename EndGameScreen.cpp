@@ -57,14 +57,14 @@ void EndGameScreen::displayScoreText() {
 void EndGameScreen::displayScore() {
 
 
-    //std::thread([this]() {
+
 
 
     displayScoreText();
-        std::this_thread::sleep_for(std::chrono::seconds(4));
-        checkHighScore();
-    //    }).detach();
-        this->clear();
+    std::this_thread::sleep_for(std::chrono::seconds(4));
+    checkHighScore();
+
+    this->clear();
 }
 
 void EndGameScreen::checkHighScore() {
@@ -79,26 +79,27 @@ void EndGameScreen::checkHighScore() {
         }
         inputFile.close();
     }
-    // Manually sort the scores vector in descending order using a simple for loop
-    for (int i = scores.size() - 1; i > 0; --i) {
-        if (scores[i].first > scores[i - 1].first) {
-            std::swap(scores[i], scores[i - 1]);
-        }
-        else {
-            break; // Break the loop early if no more swaps are needed
-        }
-    }
 
+    std::ranges::sort(scores, [](const auto& a, const auto& b) {
+        return a.first > b.first;
+        });
+
+    // Update scores with player name
+    for (auto& score : scores) {
+
+            std::cout << score.second << "\n";
+
+
+        }
+  
     
     if (scores.empty() || playerScore > scores.back().first) {
 
         newHighScore = true;
         scores.push_back({ playerScore, "" });
 
-
-        // Wyœwietlenie komunikatu "PUSTE", gdy wektor jest pusty
         if (scores.empty()) {
-            std::cout << "PUSTE" << "\n";
+            std::cout << "Scores empty" << "\n";
         }
         else
             std::cout << scores.back().first << "\n";
@@ -165,9 +166,9 @@ void EndGameScreen::promptForName() {
         if (nameEntered) {
             
 
-            for (const auto& score : scores) {
+            /*for (const auto& score : scores) {
                 std::cout << score.first << " " << score.second << "\n";
-            }
+            }*/
             // Update scores with player name
             for (auto& score : scores) {
                 if (score.first == playerScore && score.second.empty()) {
@@ -177,17 +178,18 @@ void EndGameScreen::promptForName() {
                     break;
                 }
             }
-
-            // Manually sort the scores vector in descending order using a simple for loop
-            for (int i = scores.size() - 1; i > 0; --i) {
-                if (scores[i].first > scores[i - 1].first) {
-                    std::swap(scores[i], scores[i - 1]);
-                }
-                else {
-                    break; // Break the loop early if no more swaps are needed
-                }
-            }
-
+            std::ranges::sort(scores, [](const auto& a, const auto& b) {
+                return a.first > b.first;
+                });
+            //// Manually sort the scores vector in descending order using a simple for loop
+            //for (int i = scores.size() - 1; i > 0; --i) {
+            //    if (scores[i].first > scores[i - 1].first) {
+            //        std::swap(scores[i], scores[i - 1]);
+            //    }
+            //    else {
+            //        break; // Break the loop early if no more swaps are needed
+            //    }
+            //}
 
 
             // Write scores to file (append mode)

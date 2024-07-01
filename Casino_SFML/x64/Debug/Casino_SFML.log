@@ -1,20 +1,160 @@
-﻿  EndGameScreen.cpp
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(83,16): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,73): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,73): warning C4244:         with
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,73): warning C4244:         [
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,73): warning C4244:             T=unsigned int
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,73): warning C4244:         ]
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,48): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,48): warning C4244:         with
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,48): warning C4244:         [
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,48): warning C4244:             T=unsigned int
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(116,48): warning C4244:         ]
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(123,79): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(123,52): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(139,95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(139,68): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(145,95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(145,68): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-C:\Users\Dawid\Desktop\Casino_SFML\EndGameScreen.cpp(182,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+﻿  Casino_SFML.cpp
+  CoinflipGame.cpp
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(13,115): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(13,115): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(13,115): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(13,115): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(13,115): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(16,82): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(16,82): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(16,82): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(16,82): warning C4244:             T=unsigned int
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(16,82): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(16,82): warning C4244:         and
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(16,82): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(16,82): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(16,82): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(20,127): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(20,127): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(20,127): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(20,127): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(20,127): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(23,127): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(23,127): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(23,127): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(23,127): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(23,127): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,171): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,171): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,171): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,171): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,171): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,150): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,150): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,150): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,150): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(62,150): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,112): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,112): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,112): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,112): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,112): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,91): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,91): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,91): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,91): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(68,91): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,115): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,115): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,115): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,115): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,115): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,94): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,94): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,94): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,94): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(73,94): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,115): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,115): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,115): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,115): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,115): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,94): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,94): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,94): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,94): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(80,94): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(108,115): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(108,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(109,88): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(130,142): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(130,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(131,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(136,142): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(136,85): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(137,97): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\CoinflipGame.cpp(146,18): warning C4305: 'initializing': truncation from 'double' to 'float'
+  RouletteGame.cpp
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(55,28): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(55,23): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,82): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,82): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,82): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,82): warning C4244:             T=unsigned int
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,82): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,52): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,52): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,52): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,52): warning C4244:             T=unsigned int
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(56,52): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(67,58): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,73): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,73): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,73): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,73): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,73): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,52): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,52): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,52): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,52): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(122,52): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(133,42): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(149,65): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(169,70): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(208,28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(351,30): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(367,58): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(241,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'RouletteGame.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(241,76):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\Dawid\Desktop\Casino_SFML\RouletteGame.cpp(222,59):
+  	see reference to function template instantiation 'std::shared_ptr<EndGameScreen> std::make_shared<EndGameScreen,std::shared_ptr<sf::RenderWindow>&,double&>(std::shared_ptr<sf::RenderWindow> &,double &)' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(2738,46):
+  	see reference to function template instantiation 'std::_Ref_count_obj2<EndGameScreen>::_Ref_count_obj2<std::shared_ptr<sf::RenderWindow>&,double&>(std::shared_ptr<sf::RenderWindow> &,double &)' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(2062,18):
+  	see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::shared_ptr<sf::RenderWindow>&,double&>(_Ty &,std::shared_ptr<sf::RenderWindow> &,double &) noexcept(false)' being compiled
+          with
+          [
+              _Ty=EndGameScreen
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(251,14):
+  	see reference to function template instantiation '_Ty *std::construct_at<_Ty,std::shared_ptr<sf::RenderWindow>&,double&,0x0>(_Ty *const ,std::shared_ptr<sf::RenderWindow> &,double &) noexcept(<expr>)' being compiled
+          with
+          [
+              _Ty=EndGameScreen
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(255,82): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'RouletteGame.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(242,90): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'RouletteGame.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(242,90):
+  the template instantiation context (the oldest one first) is
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(2062,18):
+  	see reference to function template instantiation 'void std::_Construct_in_place<_Ty,std::shared_ptr<sf::RenderWindow>&,double&>(_Ty &,std::shared_ptr<sf::RenderWindow> &,double &) noexcept(false)' being compiled
+          with
+          [
+              _Ty=EndGameScreen
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(251,14):
+  	see reference to function template instantiation '_Ty *std::construct_at<_Ty,std::shared_ptr<sf::RenderWindow>&,double&,0x0>(_Ty *const ,std::shared_ptr<sf::RenderWindow> &,double &) noexcept(false)' being compiled
+          with
+          [
+              _Ty=EndGameScreen
+          ]
+  
+  TitleWindow.cpp
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,81): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,81): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,81): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,81): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,81): warning C4244:         ]
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,60): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,60): warning C4244:         with
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,60): warning C4244:         [
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,60): warning C4244:             T=float
+C:\Users\Dawid\Desktop\Casino_SFML\TitleWindow.cpp(61,60): warning C4244:         ]
+  Generating Code...
   Casino_SFML.vcxproj -> C:\Users\Dawid\Desktop\Casino_SFML\x64\Debug\Casino_SFML.exe

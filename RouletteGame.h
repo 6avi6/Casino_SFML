@@ -10,6 +10,7 @@
 #include "EndGameScreen.h"
 
 #include <ranges>
+#include <thread>
 #include <ctime>
 #include <cstdlib>
 #include <random>
@@ -27,6 +28,8 @@ public:
     bool isOpen;
 
 private:
+    void initRoulette();
+    void initInterface();
     void handleEvents();
     void update();
     void render();

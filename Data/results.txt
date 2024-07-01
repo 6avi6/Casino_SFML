@@ -1,4 +1,4 @@
-1200.5 Alice
+1200 Alice
 1100 Bob
 1000 Baca
 950.25 Charlie
@@ -7,4 +7,4 @@
 600 Frank
 550.5 Grace
 300 Ada
-200 Adam@
+50 SMRLD

@@ -7,7 +7,7 @@
 #include <memory>
 
 
-#include <thread>
+
 #include <chrono>
 
 // Derived class for the Coinflip game

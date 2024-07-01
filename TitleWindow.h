@@ -23,8 +23,7 @@ public:
     void display() override;
 
 private:
-    // Vector to store drawable graphical objects
-    std::vector<std::shared_ptr<GraphicalObject>> drawableObjects;
+
 
     // Buttons in the window
     std::shared_ptr<Button> rouletteButton;

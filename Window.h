@@ -81,7 +81,7 @@ public:
         return out.str();
     }
 
-private:
+protected:
     // Vector to hold drawable objects
     std::vector<std::shared_ptr<GraphicalObject>> drawableObjects;
 };
